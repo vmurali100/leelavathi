@@ -1,0 +1,22 @@
+<p>parent works!</p>
+Message Received From Child : {{ messageFromChild }}
+
+<ng-container *ngFor="let user of arrayChild">
+  <ul>
+    <li *ngFor="let prop of convertObjArray(user)">
+      {{ prop }} - {{ user[prop] }}
+    </li>
+  </ul>
+</ng-container>
+
+<p *ngIf="objFromChild">
+  Object Receied from Child : First Name : {{ objFromChild.fname }}-{{
+    objFromChild.lname
+  }}
+</p>
+<hr />
+<app-child
+  (sendData)="receiveDataFromChild($event)"
+  (sendObj)="receiveObjFromChild($event)"
+  (sendArray)="receiveArrayFromChild($event)"
+></app-child>
