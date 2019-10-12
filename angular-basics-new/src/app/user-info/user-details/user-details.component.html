@@ -1,0 +1,9 @@
+<p>user-details works!</p>
+
+<p>Message Received From Parent : {{ messageFromParent }}</p>
+
+<ul>
+  <li *ngFor="let prop of covertObjArray(objFromParent)">
+    {{ objFromParent[prop] }}
+  </li>
+</ul>

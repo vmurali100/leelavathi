@@ -1,0 +1,14 @@
+<p>new-parent works!</p>
+message Fom Child :- {{ msgChild }}
+
+<ul *ngIf="objFromChild">
+  <li *ngFor="let user of convertObjToAry(objFromChild)">
+    {{ user }}-{{ objFromChild[user] }}
+  </li>
+</ul>
+<hr />
+<app-new-child
+  (sendData)="recDataFromChild($event)"
+  (sendObj)="recObjFromChild($event)"
+>
+</app-new-child>

@@ -1,0 +1,13 @@
+<form #userForm="ngForm">
+  <label for="fname">First Name : </label>
+  <input type="text" name="fname" ngModel /><br />
+  <label for="fname">Last Name : </label>
+  <input type="text" name="lname" ngModel /><br />
+  <button (click)="getValues(userForm)" type="button">Get Values</button>
+</form>
+<hr />
+<app-user-details
+  [messageFromParent]="msgFromUser"
+  [objFromParent]="objFromUser"
+  [arrayFromParent]="arrayFromUser"
+></app-user-details>

@@ -1,0 +1,9 @@
+<p>new-child works!</p>
+
+<form #userForm="ngForm">
+  <label for="fName">First Name :</label>
+  <input type="text" name="fName" ngModel />
+  <label for="lName">Last Name :</label>
+  <input type="text" name="lName" ngModel />
+  <button (click)="sendToParent(userForm)" type="button">sendToParent</button>
+</form>
