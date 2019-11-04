@@ -1,0 +1,10 @@
+{
+  "rayalaseema": [
+    { "distName": "Chittoor" },
+    { "distName": "Kadapa" },
+    { "distName": "Kurnool" },
+    { "distName": "Anantapoor" }
+  ],
+  "andhra": [{ "distName": "Krishna" }],
+  "telangana": [{ "distName": "Medak" }]
+}
