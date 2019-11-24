@@ -8,12 +8,10 @@ import { CommonService } from "../common.service";
 })
 export class RayalaseemaComponent implements OnInit {
   data: any;
+  districts: any;
   constructor(private commonService: CommonService) {}
 
   ngOnInit() {
-    this.commonService.getDistricts("rayalaseema").subscribe(response => {
-      console.log(response);
-      this.data = response;
-    });
+    this.districts = this.commonService.getDistricts("Rayalaseema");
   }
 }

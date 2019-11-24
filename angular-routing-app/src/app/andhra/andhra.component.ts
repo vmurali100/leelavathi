@@ -7,11 +7,10 @@ import { CommonService } from "../common.service";
   styleUrls: ["./andhra.component.css"]
 })
 export class AndhraComponent implements OnInit {
+  districts: any;
   constructor(private commonService: CommonService) {}
 
   ngOnInit() {
-    this.commonService.getDistricts("andhra").subscribe(response => {
-      console.log(response);
-    });
+    this.districts = this.commonService.getDistricts("Andhra");
   }
 }

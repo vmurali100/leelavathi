@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { CommonService } from "../common.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-telangana",
@@ -7,11 +8,14 @@ import { CommonService } from "../common.service";
   styleUrls: ["./telangana.component.css"]
 })
 export class TelanganaComponent implements OnInit {
-  constructor(private commonService: CommonService) {}
+  districts: any;
+  constructor(
+    private commonService: CommonService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.commonService.getDistricts("telangana").subscribe(response => {
-      console.log(response);
-    });
+    this.districts = this.commonService.getDistricts("Telangana");
+    console.log(this.districts);
   }
 }

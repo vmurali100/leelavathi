@@ -6,13 +6,15 @@ import { AppRoutingModule } from "./app-routing.module";
 import { RayalaseemaComponent } from "./rayalaseema/rayalaseema.component";
 import { AndhraComponent } from "./andhra/andhra.component";
 import { TelanganaComponent } from "./telangana/telangana.component";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RayalaseemaComponent,
     AndhraComponent,
-    TelanganaComponent
+    TelanganaComponent,
+    PageNotFoundComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
