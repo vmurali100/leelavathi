@@ -17,6 +17,19 @@ export class CommonService {
     });
     return districts;
   }
+
+  getDestrictDetails(distName) {
+    let distInfo = {};
+    state.map(dist => {
+      dist.districts.map(obj => {
+        console.log(obj);
+        if (obj.districtName == distName) {
+          distInfo = obj;
+        }
+      });
+    });
+    return distInfo;
+  }
 }
 
 let state = [
@@ -30,6 +43,25 @@ let state = [
   },
   {
     areaName: "Rayalaseema",
-    districts: ["Kadapa", "Kurnool", "Anantpoor", "Chittoor"]
+    districts: [
+      {
+        districtName: "Chittoor",
+        image: "https://www.holidify.com/images/bgImages/CHITTOOR.jpg"
+      },
+      {
+        districtName: "Kadapa",
+        image: "https://i.ytimg.com/vi/4XfLdgJ_b54/maxresdefault.jpg"
+      },
+      {
+        districtName: "Anantapoor",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/6/67/Anatapur_Railway_station_board.jpg"
+      },
+      {
+        districtName: "Kurnool",
+        image:
+          "https://cdn.s3waas.gov.in/s37f24d240521d99071c93af3917215ef7/uploads/2018/02/2018022887-1024x924.jpg"
+      }
+    ]
   }
 ];

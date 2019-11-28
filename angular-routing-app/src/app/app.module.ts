@@ -4,19 +4,20 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { RayalaseemaComponent } from "./rayalaseema/rayalaseema.component";
-import { AndhraComponent } from "./andhra/andhra.component";
 import { TelanganaComponent } from "./telangana/telangana.component";
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { AndhraModule } from "./andhra/andhra-module";
+import { DistrictDetailsComponent } from './district-details/district-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RayalaseemaComponent,
-    AndhraComponent,
     TelanganaComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DistrictDetailsComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, AndhraModule],
   providers: [],
   bootstrap: [AppComponent]
 })

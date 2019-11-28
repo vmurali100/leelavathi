@@ -1,7 +1,10 @@
 <p>rayalaseema works!</p>
 
 <ul>
-  <li *ngFor="let dist of districts">
-    {{ dist }}
+  <li
+    *ngFor="let dist of districts"
+    [routerLink]="['/rayalaseema', dist.districtName]"
+  >
+    {{ dist.districtName }}
   </li>
 </ul>

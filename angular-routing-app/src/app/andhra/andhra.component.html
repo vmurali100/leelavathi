@@ -1,6 +1,6 @@
 <p>andhra works!</p>
 <ul>
-  <li *ngFor="let dist of districts">
+  <li *ngFor="let dist of districts" [routerLink]="['/andhra', dist]">
     {{ dist }}
   </li>
 </ul>

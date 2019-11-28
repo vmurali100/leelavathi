@@ -14,4 +14,6 @@ export class RayalaseemaComponent implements OnInit {
   ngOnInit() {
     this.districts = this.commonService.getDistricts("Rayalaseema");
   }
+
+  goBackToDistricts() {}
 }
