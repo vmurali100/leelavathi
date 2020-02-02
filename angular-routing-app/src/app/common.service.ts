@@ -21,12 +21,12 @@ export class CommonService {
   getDestrictDetails(distName) {
     let distInfo = {};
     state.map(dist => {
-      dist.districts.map(obj => {
-        console.log(obj);
-        if (obj.districtName == distName) {
-          distInfo = obj;
-        }
-      });
+      // dist.districts.map(obj => {
+      //   console.log(obj);
+      //   if (obj.districtName == distName) {
+      //     distInfo = obj;
+      //   }
+      // });
     });
     return distInfo;
   }
