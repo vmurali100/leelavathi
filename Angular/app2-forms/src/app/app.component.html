@@ -1,0 +1,22 @@
+<!-- <form #myForm="ngForm">
+  <label for="fname">FName : </label>
+  <input type="text" name="fName" ngModel />
+  <br /><br />
+  <label for="lname">LName : </label>
+  <input type="text" name="lName" ngModel />
+  <br /><br />
+  <button type="button" (click)="getUser(myForm)">Submit</button>
+</form>
+<hr />
+
+<h2>{{ user.fName }}</h2> -->
+
+<form [formGroup]="userForm">
+  <label for="fname">FName : </label>
+  <input type="text" name="fName" formControlName="fName" />
+  <br /><br />
+  <label for="lname">LName : </label>
+  <input type="text" name="lName" formControlName="lName" />
+  <br /><br />
+  <button type="button" (click)="getUser()">Submit</button>
+</form>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      function myFunction() {
+        var str = "Visit W3Schools . The website W3Schools school is very good";
+        var patt = /w3schools/gi;
+        var result = str.match(patt);
+        console.log(result);
+        document.getElementById("demo").innerHTML = result;
+      }
+
+      myFunction();
+    </script>
+  </body>
+</html>

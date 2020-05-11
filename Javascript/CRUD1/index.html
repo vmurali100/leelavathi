@@ -23,7 +23,12 @@
             </div>
             <div class="form-group">
               <label for="lname">Last Name</label>
-              <input type="text" class="form-control" id="lname" />
+              <input
+                type="text"
+                class="form-control"
+                id="lname"
+                onkeyup="validateForm()"
+              />
             </div>
             <div class="form-group">
               <label for="email">Email address</label>
@@ -102,7 +107,12 @@
                 Angular
               </label>
             </div>
-            <button type="button" class="btn btn-primary" onclick="getData()">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="getData()"
+              disabled
+            >
               Submit
             </button>
             <button
@@ -142,5 +152,6 @@
       </div>
     </div>
     <script src="create.js"></script>
+    <script src="validate.js"></script>
   </body>
 </html>
