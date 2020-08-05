@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="shuffleNumbers()">Shuffle</button>
+    <button onclick="arrangeAse()">Asending</button>
+    <button onclick="arrangeDesc()">Descending</button>
+    <script>
+      var nums = [];
+      var shuffled = [];
+      i = 1;
+      while (i <= 10) {
+        nums.push(i);
+        i++;
+      }
+      console.log(nums);
+      function shuffleNumbers() {
+        j = 0;
+        while (j < 10) {
+          var rNo = Math.round(Math.random() * 10);
+          if (shuffled.length == 0) {
+            shuffled.push(rNo);
+          } else {
+            if (!shuffled.includes(rNo)) {
+              shuffled.push(rNo);
+            }
+          }
+          j++;
+        }
+        console.log(shuffled);
+      }
+    </script>
+  </body>
+</html>

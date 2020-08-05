@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div#main {
+        width: 300px;
+        height: 300px;
+        border: 1px solid;
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        float: left;
+        line-height: 6;
+        text-align: center;
+        color: white;
+      }
+      .color1 {
+        background: #000000;
+      }
+      .color2 {
+        background: #333333;
+      }
+      .color3 {
+        background: lightgray;
+      }
+      .color4 {
+        background: lightskyblue;
+      }
+      .color5 {
+        background: #72c3dc;
+      }
+      .color6 {
+        background: #2b8ead;
+      }
+      .color7 {
+        background: #6f98a8;
+      }
+      .color8 {
+        background: #bfbfbf;
+      }
+      .color9 {
+        background: #2f454e;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="shuffle()">Shuffle</button>
+    <button onclick="sortNos()">Sort</button>
+    <div id="main"></div>
+    <script>
+      var nos = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      var shuffledNos = [];
+      // #000000 #2B8EAD
+      // #333333 #6F98A8
+      // #FFFFFF #BFBFBF
+      // #EFEFEF #2F454E
+      // #72C3DC
+      function display(nos) {
+        nos.map((no, i) => {
+          var div = document.createElement("div");
+          div.setAttribute("class", "child color" + no);
+          div.innerHTML = no;
+          document.getElementById("main").appendChild(div);
+        });
+      }
+      function sortNos() {
+        document.getElementById("main").innerHTML = "";
+        display(nos);
+      }
+      display(nos);
+      function shuffle() {
+        document.getElementById("main").innerHTML = "";
+        shuffledNos = [];
+        while (shuffledNos.length < 9) {
+          var rNo = Math.ceil(Math.random() * 9);
+          if (shuffledNos.length == 0) {
+            shuffledNos.push(rNo);
+          } else {
+            if (!shuffledNos.includes(rNo)) {
+              shuffledNos.push(rNo);
+            }
+          }
+        }
+        console.log(shuffledNos);
+        display(shuffledNos);
+      }
+    </script>
+  </body>
+</html>
